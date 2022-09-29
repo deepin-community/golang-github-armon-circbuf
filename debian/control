@@ -1,0 +1,29 @@
+Source: golang-github-armon-circbuf
+Section: golang
+Priority: optional
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Tianon Gravi <tianon@debian.org>,
+           Tim Potter <tpot@hpe.com>,
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+Standards-Version: 4.5.1
+Homepage: https://github.com/armon/circbuf
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-armon-circbuf
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-armon-circbuf.git
+XS-Go-Import-Path: github.com/armon/circbuf
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-armon-circbuf-dev
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Multi-Arch: foreign
+Description: Golang circular (ring) buffer
+ This package provides the circbuf Go library. This provides a Buffer object
+ which is a circular (or ring) buffer. It has a fixed size, but can be written
+ to infinitely. Only the last size bytes are ever retained. The buffer
+ implements the io.Writer interface.
+ .
+ This package contains the source.
